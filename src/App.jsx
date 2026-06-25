@@ -9,10 +9,9 @@ export default function App() {
     <div className="bg-gray-950 text-gray-100 font-sans min-h-screen p-8 max-w-5xl mx-auto">
       <header className="text-center my-12">
         <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Josh Sar-Shalom</h1>
-        <p className="text-xl text-blue-400 mb-6">Computer Engineering Student at UCF</p>
+        <p className="text-xl text-blue-400 mb-6">Computer Engineering Student at UCF | Smart Buildings/IoT Intern at TLC Engineering Solutions</p>
         <div className="flex justify-center gap-6 text-sm font-medium">
-          <a href="resume.pdf" target="_blank" rel="noreferrer" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded transition shadow-lg">Resume</a>
-          <a href="https://www.linkedin.com/in/josh-sar/" target="_blank" rel="noreferrer" className="border border-gray-700 hover:bg-gray-800 px-4 py-2 rounded transition">LinkedIn</a>
+        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded transition shadow-lg">Resume</a>          <a href="https://www.linkedin.com/in/josh-sar/" target="_blank" rel="noreferrer" className="border border-gray-700 hover:bg-gray-800 px-4 py-2 rounded transition">LinkedIn</a>
           <a href="https://github.com/JoshSar-Shalom" target="_blank" rel="noreferrer" className="border border-gray-700 hover:bg-gray-800 px-4 py-2 rounded transition">GitHub</a>
         </div>
       </header>
