@@ -7,12 +7,17 @@ export default function ProjectCard({ project, onReadMore }) {
 
   useEffect(() => {
     if (!isPaused) {
-      timerRef.current = setInterval(() => {
+      // If it's the first slide (index 0), hold for 20 seconds. Otherwise, standard 3 seconds.
+      const delay = currentSlide === 0 ? 20000 : 3000;
+
+      timerRef.current = setTimeout(() => {
         setCurrentSlide((prev) => (prev + 1) % project.images.length);
-      }, 3000);
+      }, delay);
     }
-    return () => clearInterval(timerRef.current);
-  }, [isPaused, project.images.length]);
+    
+    // Clean up the timeout cleanly on state updates or unmounts
+    return () => clearTimeout(timerRef.current);
+  }, [isPaused, currentSlide, project.images.length]); // Re-run effect whenever slide changes to recalculate the delay
 
   const handleManualNav = (index, e) => {
     e.stopPropagation(); 
